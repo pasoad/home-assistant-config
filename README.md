@@ -4,7 +4,7 @@ First of all, i'm not a dev. So i'm prety sure they are a lot of mistakes for a 
 
 ## Screenshots
 
-
+![UI](/screenshots/2020-11-29 22_08_45-Home Assistant.png?raw=true "Lumières")
 
 ## Structure of my HA's config
 
