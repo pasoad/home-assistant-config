@@ -1,0 +1,17 @@
+alias: guest_mode_sat_morning_ios
+trigger:
+  platform: time
+  at: '07:50:00'
+condition:
+  condition: time
+  weekday: sat
+action:
+  service: notify.mobile_app_iphone_de_p_a
+  data:
+    title: Guest mode
+    message: Faut'il activer le mode invité ?
+      data:
+        push:
+          category: "Guest_Mode"
+        
+    

@@ -1,0 +1,5 @@
+#
+# https://hacs.xyz/
+#
+hacs:
+  token: !secret hacs_token

@@ -1,0 +1,14 @@
+alias: '[Input_select] mis a jour par HARMONY'
+initial_state: true
+trigger:
+  platform: state
+  entity_id: remote.harmony_hub
+condition:
+  condition: template
+  value_template: '{{ trigger.to_state.attributes.current_activity in state_attr(''input_select.harmony_hub'',
+    ''options'') }}'
+action:
+  service: input_select.select_option
+  data_template:
+    entity_id: input_select.harmony_hub
+    option: '{{ state_attr(''remote.harmony_hub'', ''current_activity'') }}'

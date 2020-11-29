@@ -1,0 +1,9 @@
+type: button
+tap_action:
+  action: toggle
+entity: script.tvstick
+icon: 'mdi:amazon'
+show_state: false
+show_icon: true
+show_name: false
+icon_height: 50px

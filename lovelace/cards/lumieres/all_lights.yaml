@@ -1,0 +1,7 @@
+entities:
+  - entity: light.all_lights_2
+    name: Toutes les lumières
+    icon: 'mdi:lightbulb'
+show_header_toggle: false
+title: Toutes les lumières
+type: entities

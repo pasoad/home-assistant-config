@@ -1,0 +1,16 @@
+alias: vibration_porte_chambre_parents_8_to_22
+trigger:
+  type: vibration
+  platform: device
+  device_id: 30152147d67bfca83967ca1911c3c2eb
+  entity_id: binary_sensor.vibration_chambre_parents
+  domain: binary_sensor
+condition:
+  - condition: time
+    after: '08:00:00'
+    before: '22:00:00'
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.hall_2
+      brightness: 200

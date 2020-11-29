@@ -1,0 +1,14 @@
+title: Imprimante 3d
+icon: mdi:printer-3d
+path: imprimante3d
+badges: []
+
+cards:
+  - type: vertical-stack
+    cards:
+      - !include /config/lovelace/cards/imprimante3d/webcam.yaml
+
+  - type: vertical-stack
+    cards:  
+      - !include /config/lovelace/cards/imprimante3d/tool_temp.yaml
+      - !include /config/lovelace/cards/imprimante3d/bed_temp.yaml

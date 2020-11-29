@@ -1,0 +1,8 @@
+type: history-graph
+entities:
+  - entity: sensor.longer_lk4_actual_tool0_temp
+    name: Temp. actuelle de l'extrudeur
+  - entity: sensor.longer_lk4_target_tool0_temp
+    name: Temp. voulue de l'extrudeur
+hours_to_show: 12
+refresh_interval: 0

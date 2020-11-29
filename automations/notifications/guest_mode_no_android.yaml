@@ -1,0 +1,9 @@
+alias: guest_mode_no_android
+trigger:
+- event_data:
+    action: guest_mode_no
+  event_type: mobile_app_notification_action
+  platform: event
+action:
+- service: input_boolean.turn_off
+  entity_id: input_boolean.guest_mode

@@ -1,0 +1,18 @@
+alias: guest_mode_sat_morning_android
+trigger:
+- platform: time
+  at: '07:50:00'
+condition:
+  - condition: time
+    weekday: sat
+action:
+- data:
+    data:
+      actions:
+      - action: guest_mode_yes
+        title: Oui
+      - action: guest_mode_no
+        title: Non
+    message: Faut'il activer le mode invité ?
+    title: Guest mode
+  service: notify.mobile_app_bla_l09

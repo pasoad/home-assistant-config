@@ -1,0 +1,12 @@
+type: "custom:mini-graph-card"
+entities:   
+  - entity: sensor.speedtest_download
+    name: Download
+  - entity: sensor.speedtest_upload
+    name: Upload
+  - entity: sensor.speedtest_ping
+    name: Ping
+hours_to_show: 168
+name: Speedtest.net
+points: true
+aggregate_func: min

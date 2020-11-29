@@ -1,0 +1,78 @@
+switch:
+  - platform: template
+    switches:
+      # DYSON FAN SWITCHES
+      fanpower:
+        friendly_name: "Fan Power"
+        value_template: "{{ ( is_state('fan.salon', 'on') or is_state_attr('fan.salon', 'auto_mode', true)  )}}"
+        turn_on:
+          service: fan.turn_on
+          data:
+            entity_id: fan.salon
+        turn_off:
+          service: fan.turn_off
+          data:
+            entity_id: fan.salon
+        icon_template: >
+          {% if is_state('fan.salon', 'on') or is_state_attr('fan.salon', 'auto_mode', true) %}
+            mdi:fan
+          {% else %}
+            mdi:minus-circle-outline
+          {% endif %}
+      oscillation:
+        friendly_name: Oscillation
+        value_template: "{{ ( is_state('fan.salon', 'on') or is_state_attr('fan.salon', 'auto_mode', true)  ) and is_state_attr('fan.salon', 'oscillating', true) }}"
+        turn_on:
+          service: fan.oscillate
+          data:
+            entity_id: fan.salon
+            oscillating: true
+        turn_off:
+          service: fan.oscillate
+          data:
+            entity_id: fan.salon
+            oscillating: false
+        icon_template: >
+          {% if is_state('fan.salon', 'on') or is_state_attr('fan.salon', 'auto_mode', true) and is_state_attr('fan.salon', 'oscillating', true) %}
+            mdi:cached
+          {% else %}
+            mdi:minus-circle-outline
+          {% endif %}
+      fan_night:
+        friendly_name: "Night Mode"
+        value_template: "{{ ( is_state('fan.salon', 'on') or is_state_attr('fan.salon', 'auto_mode', true)  ) and is_state_attr('fan.salon', 'night_mode', true) }}"
+        turn_on:
+          service: dyson.set_night_mode
+          data:
+            entity_id: fan.salon
+            night_mode: true
+        turn_off:
+          service: dyson.set_night_mode
+          data:
+            entity_id: fan.salon
+            night_mode: false
+        icon_template: >
+          {% if is_state('fan.salon', 'on') and is_state_attr('fan.salon', 'night_mode', true) %}
+            mdi:weather-night
+          {% else %}
+            mdi:minus-circle-outline
+          {% endif %}
+      fan_auto:
+        friendly_name: "Auto Mode"
+        value_template: "{{ is_state_attr('fan.salon', 'auto_mode', true) }}"
+        turn_on:
+          service: dyson.set_auto_mode
+          data:
+            entity_id: fan.salon
+            auto_mode: true
+        turn_off:
+          service: dyson.set_auto_mode
+          data:
+            entity_id: fan.salon
+            auto_mode: false
+        icon_template: >
+          {% if is_state_attr('fan.salon', 'auto_mode', true) %}
+            mdi:brightness-auto
+          {% else %}
+            mdi:minus-circle-outline
+          {% endif %}

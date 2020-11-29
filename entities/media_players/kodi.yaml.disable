@@ -1,0 +1,2 @@
+platform: kodi
+host: !secret ip_kodi

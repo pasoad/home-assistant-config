@@ -1,0 +1,7 @@
+#
+# https://www.home-assistant.io/integrations/zone/
+#
+# zone:
+#   - name: Travail P.A.
+#     latitude: 46.22734
+#     longitude: 6.08515

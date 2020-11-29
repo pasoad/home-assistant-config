@@ -1,0 +1,13 @@
+title: Lumières
+icon: 'mdi:desk-lamp'
+path: lumieres
+badges: []
+
+cards:
+  - !include /config/lovelace/cards/lumieres/petites_lumieres.yaml
+  - !include /config/lovelace/cards/lumieres/hall.yaml
+  - !include /config/lovelace/cards/lumieres/sejour.yaml
+  - !include /config/lovelace/cards/lumieres/cuisine.yaml
+  - !include /config/lovelace/cards/lumieres/salle_de_bain.yaml
+  - !include /config/lovelace/cards/lumieres/toilettes.yaml
+  - !include /config/lovelace/cards/lumieres/all_lights.yaml

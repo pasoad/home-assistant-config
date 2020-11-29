@@ -1,0 +1,10 @@
+volume_down:
+  alias: Volume Down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeDown
+        device: Onkyo AV Receiver
+        num_repeats: 3
+        delay_secs: 0.25

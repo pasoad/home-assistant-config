@@ -1,0 +1,11 @@
+alias: "radio_on"
+trigger:
+  - platform: time
+    at: '19:30:00'
+condition:
+  condition: state
+  entity_id: group.potellefamily
+  state: home
+action:
+  - service: switch.turn_on
+    entity_id: switch.on_off_radio_de_jules

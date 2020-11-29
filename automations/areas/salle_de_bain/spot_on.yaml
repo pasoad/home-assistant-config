@@ -1,0 +1,62 @@
+alias: motion_on_salle_de_bain
+mode: restart
+trigger:
+  platform: state
+  entity_id: binary_sensor.tradfri_motion_sensor
+  to: 'on'
+action:
+  - choose:
+    - conditions:
+      - condition: time
+        after: '08:00:00'
+        before: '20:30:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 254
+    - conditions:
+      - condition: time
+        after: '20:30:00'
+        before: '23:50:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 60
+    - conditions:
+      - condition: time
+        after: '23:50:00'
+        before: '04:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 30
+    - conditions:
+      - condition: time
+        after: '04:00:00'
+        before: '05:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 100
+    - conditions:
+      - condition: time
+        after: '05:00:00'
+        before: '07:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 30
+    - conditions:
+      - condition: time
+        after: '07:00:00'
+        before: '08:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.salle_de_bain_2
+            brightness: 100

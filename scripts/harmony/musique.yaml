@@ -1,0 +1,7 @@
+musique:
+  alias: écouter de la musique
+  sequence:
+    - data:
+        activity: "écouter de la musique"
+      entity_id: remote.harmony_hub
+      service: remote.turn_on

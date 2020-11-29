@@ -1,0 +1,12 @@
+entities:
+  - entity: light.spot_g
+    icon: 'mdi:track-light'
+    name: Spot de gauche
+  - entity: light.spot_c
+    icon: 'mdi:track-light'
+    name: Spot au centre
+  - entity: light.spot_d
+    icon: 'mdi:track-light'
+    name: Spot de droite
+title: Salle de bain
+type: entities

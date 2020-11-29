@@ -1,0 +1,7 @@
+alias: volumio_off
+trigger:
+  - platform: time
+    at: '23:00:00'
+action:
+  - service: switch.turn_off
+    entity_id: switch.volumio_salle_de_bain

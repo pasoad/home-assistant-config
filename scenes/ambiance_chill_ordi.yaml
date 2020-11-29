@@ -1,0 +1,50 @@
+name: ambiance_chill_ordi
+entities:
+  light.lampe_a_gauche_de_la_tele:
+    brightness: 109
+    friendly_name: Lampe à gauche de la télé
+    is_deconz_group: false
+    state: 'on'
+    supported_features: 41
+  light.lampe_du_bureau_rgb:
+    brightness: 103
+    effect_list:
+    - colorloop
+    friendly_name: Lampe du bureau RGB
+    hs_color:
+    - 240.786
+    - 89.804
+    is_deconz_group: false
+    max_mireds: 500
+    min_mireds: 153
+    rgb_color:
+    - 28
+    - 25
+    - 255
+    state: 'on'
+    supported_features: 63
+    xy_color:
+    - 0.141
+    - 0.047
+  light.lampe_en_bois:
+    brightness: 174
+    friendly_name: Lampe en bois
+    is_deconz_group: false
+    state: 'on'
+    supported_features: 41
+  light.lustre_cuisine:
+    friendly_name: Lustre cuisine
+    is_deconz_group: false
+    state: 'off'
+    supported_features: 41
+  light.lustre_du_sejour:
+    friendly_name: Lustre du séjour
+    is_deconz_group: false
+    state: 'off'
+    supported_features: 41
+  switch.lampe_rose:
+    friendly_name: Lampe rose
+    state: 'off'
+  switch.on_off_led_bureau:
+    friendly_name: On/Off LED bureau
+    state: 'on'

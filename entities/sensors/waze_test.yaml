@@ -1,0 +1,11 @@
+platform: template
+sensors:
+  dest_address:
+    value_template: >-
+      {%- if is_state("input_select.destination", "Home")  -%}
+        !secret waze_home
+      {%- elif is_state("input_select.destination", "Work")  -%}
+        !secret waze_work
+      {%- else -%}
+        Unknown
+      {%- endif %}

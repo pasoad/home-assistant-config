@@ -1,0 +1,10 @@
+entities:
+  - entity: light.petites_lumieres_2
+  - entity: switch.on_off_led_bureau
+    name: LED du bureau
+    icon: mdi:led-strip-variant
+  - entity: scene.ambiance_chill_ordi
+    name: Ambiance chill ordi
+title: Lumières d'appoint
+show_header_toggle: false
+type: entities

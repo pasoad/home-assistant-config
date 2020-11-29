@@ -1,0 +1,22 @@
+alias: all_off
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 4003
+    id: philips_dimmer_switch_sejour
+condition: []
+action:
+- service: light.turn_off
+  entity_id: light.sejour_2
+- service: light.turn_off
+  entity_id: light.cuisine_2
+- service: light.turn_off
+  entity_id: light.petites_lumieres_2
+- service: switch.turn_off
+  entity_id: switch.on_off_led_bureau
+- service: switch.turn_off
+  entity_id: fan.salon
+- service: light.turn_off
+  entity_id: light.lampe_du_bureau_rgb

@@ -1,0 +1,5 @@
+#
+# https://www.home-assistant.io/integrations/http
+#
+http:
+  base_url: !secret http_base_url

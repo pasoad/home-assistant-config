@@ -1,0 +1,5 @@
+platform: attributes
+friendly_name: temperature_chambre_jules
+attribute: temperature
+entities:
+  - binary_sensor.openclose_14

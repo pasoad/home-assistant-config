@@ -1,0 +1,13 @@
+alias: Batterie de l'ipad
+trigger:
+  platform: numeric_state
+  entity_id: sensor.ipad_de_pierre_andre_battery_level
+  below: 15
+condition:
+  condition: state
+  entity_id: person.p_a
+  state: home
+action:
+  service: notify.mobile_app_iphone_de_p_a
+  data_template:
+    message: La batterie de l'iPad est à 15%

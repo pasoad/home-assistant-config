@@ -1,0 +1,4 @@
+platform: linky
+api_key: !secret linky_api_key
+point_id: !secret linky_point_id
+cost: 0.1557  # Cost per kWh

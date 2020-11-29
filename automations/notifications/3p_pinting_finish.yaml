@@ -1,0 +1,11 @@
+alias: Send a notice when 3D print is done
+trigger:
+  - platform: state
+    entity_id: binary_sensor.longer_lk4_printing
+    to: "off"
+    from: "on"
+action:
+  - service: notify.mobile_app_iphone_de_p_a
+    data:
+      message: "Your 3D print is complete"
+      title: "Print Complete"

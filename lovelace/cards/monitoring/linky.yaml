@@ -1,0 +1,11 @@
+type: entities
+entities:
+  - entity: sensor.linky_energy
+    name: Consommation du jour
+  - entity: sensor.linky_energy_month
+    name: Consommation du mois
+  - entity: sensor.linky_energy_price
+    name: Coût du jour
+  - entity: sensor.linky_energy_month_price
+    name: Coût du mois
+title: Compteur Linky

@@ -1,0 +1,10 @@
+#custom_header:
+#  compact_mode: true
+resources: !include_dir_list lovelace/resources
+views:
+  - !include lovelace/views/lumieres.yaml
+  - !include lovelace/views/multimedia.yaml
+  - !include lovelace/views/monitoring.yaml
+  - !include lovelace/views/comfort.yaml
+  - !include lovelace/views/imprimante3d.yaml
+  - !include lovelace/views/tests.yaml

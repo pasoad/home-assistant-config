@@ -1,0 +1,10 @@
+alias: Update Dyson UI controllers
+trigger:
+- entity_id: fan.salon
+  platform: state
+  to: 'on'
+action:
+- data_template:
+    value: '{{state_attr(''fan.salon'', ''speed'')}}'
+  entity_id: input_number.dyson_fan_speed
+  service: input_number.set_value

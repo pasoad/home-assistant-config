@@ -1,0 +1,4 @@
+entities:
+  - entity: light.lustre_cuisine
+title: Cuisine
+type: entities

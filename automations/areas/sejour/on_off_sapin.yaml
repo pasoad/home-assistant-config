@@ -1,0 +1,12 @@
+alias: on_off_sapin
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 1003
+    id: philips_dimmer_switch_sejour
+action:
+  device_id: 6066b5e828b5446db06bd04296c5fc76
+  domain: switch
+  entity_id: switch.on_off_sapin
+  type: toggle

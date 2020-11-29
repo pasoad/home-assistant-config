@@ -1,0 +1,9 @@
+type: button
+tap_action:
+  action: toggle
+entity: script.volume_up
+icon: 'mdi:volume-high'
+show_state: false
+show_icon: true
+show_name: false
+icon_height: 50px

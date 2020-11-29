@@ -1,0 +1,18 @@
+title: Contrôle du ventilateur Dyson
+type: glance
+entities:
+  - entity: switch.fanpower
+    tap_action:
+      action: toggle
+  - entity: switch.fan_auto
+    name: Mode Auto
+    tap_action:
+      action: toggle
+  - entity: switch.fan_night
+    name: Mode Nuit
+    icon: 'mdi:weather-night'
+    tap_action:
+      action: toggle
+  - entity: switch.oscillation
+    tap_action:
+      action: toggle

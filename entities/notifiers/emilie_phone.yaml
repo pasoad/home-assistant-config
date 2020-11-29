@@ -1,0 +1,4 @@
+platform: group
+name: emilie_phone
+services:
+  - service: notify.mobile_app_bkl_l09

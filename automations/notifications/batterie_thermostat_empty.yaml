@@ -1,0 +1,9 @@
+alias: batterie thesrmostat -10%
+trigger:
+  platform: numeric_state
+  entity_id: sensor.netatmo_hall_d_entree
+  below: 10
+action:
+  service: notify.mobile_app_iphone_de_p_a
+  data_template:
+    message: La batterie du thesrmostat dans le hall d'entrée est à moins de 10%

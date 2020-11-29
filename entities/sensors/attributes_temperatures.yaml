@@ -1,0 +1,8 @@
+platform: attributes
+friendly_name: "Temperatures"
+attribute: current_temperature
+entities:
+  - climate.netatmo_chambre_jules
+  - climate.netatmo_hall_d_entree
+  - climate.netatmo_chambre_d_amis
+  - climate.netatmo_chambre_parents

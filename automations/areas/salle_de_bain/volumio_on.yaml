@@ -1,0 +1,11 @@
+alias: volumio_on
+trigger:
+  - platform: time
+    at: '07:00:00'
+condition:
+  condition: state
+  entity_id: group.potellefamily
+  state: home
+action:
+  - service: switch.turn_on
+    entity_id: switch.volumio_salle_de_bain

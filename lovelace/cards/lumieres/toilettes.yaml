@@ -1,0 +1,5 @@
+entities:
+  - entity: light.toilettes
+    name: Lustre des toilettes
+title: Toilettes
+type: entities

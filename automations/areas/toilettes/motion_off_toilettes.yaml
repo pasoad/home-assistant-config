@@ -1,0 +1,10 @@
+alias: motion_off_toilettes
+trigger:
+  platform: state
+  entity_id: binary_sensor.tradfri_motion_sensor_3
+  to: 'off'
+  for:
+    minutes: 2
+action:
+  service: light.turn_off
+  entity_id: light.toilettes

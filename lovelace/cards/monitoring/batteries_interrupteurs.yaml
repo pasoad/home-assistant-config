@@ -1,0 +1,17 @@
+type: entities
+entities:
+  - entity: sensor.dimmer_switch_battery_level
+    name: Philips dimmer switch
+  - entity: sensor.on_off_switch_chambre_parents_battery_level
+    name: on/off Chambre parents
+  - entity: sensor.tradfri_on_off_switch_cuisine_battery_level
+    name: on/off Cuisine
+  - entity: sensor.tradfri_on_off_switch_hall_2_battery_level
+    name: on/off Hall 2
+  - entity: sensor.tradfri_on_off_switch_sejour_battery_level
+    name: on/off Lustre séjour
+  - entity: sensor.tradfri_remote_control_battery_level
+    name: Remote Chambre de Jules
+  - entity: sensor.tradfri_remote_control_sdb_battery_level
+    name: Remote Salle de bain
+title: Batteries interrupteurs

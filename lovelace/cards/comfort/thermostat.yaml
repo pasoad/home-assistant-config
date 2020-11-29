@@ -1,0 +1,14 @@
+type: custom:simple-thermostat
+entity: climate.netatmo_hall_d_entree
+name: Thermostat
+step_size: 1
+label:
+  state: état
+  temperature: Température
+  operation: mode
+  preset: Modes
+  away: Absent
+  boost: Forcer
+  schedule: Automatique
+
+  

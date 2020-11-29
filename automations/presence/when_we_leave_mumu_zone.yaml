@@ -1,0 +1,19 @@
+alias: when_we_leave_mumu_zone
+trigger:
+  - platform: state
+    entity_id: group.potellefamily
+    from: mumu_et_alentours
+condition:
+  - condition: time
+    after: '14:00:00'
+    before: '20:00:00'
+    weekday:
+      - sun
+action:
+  - service: climate.set_preset_mode
+    data:
+      entity_id: climate.netatmo_hall_d_entree
+      preset_mode: Schedule
+  - service: notify.mobile_app_bla_l09
+    data_template:
+      message: "J'ai remarqué que vous étiez sur le chemin du retour et j'active le chauffage :)"

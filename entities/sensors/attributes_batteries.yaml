@@ -1,0 +1,9 @@
+platform: attributes
+friendly_name: "Batteries"
+attribute: battery_level
+unit_of_measurement: "%"
+entities:
+  - climate.netatmo_chambre_jules
+  - climate.netatmo_hall_d_entree
+  - climate.netatmo_chambre_d_amis
+  - climate.netatmo_chambre_parents

@@ -1,0 +1,58 @@
+alias: 'Dimmer Toilettes'
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: tradfri_wireless_dimmer_2
+action:
+  - choose:
+    # Normal ON scene
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 1002 }}"
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.toilettes
+            brightness: 254
+    # Increase
+    - conditions:
+        - condition: template
+          value_template: "{{ trigger.event.data.event == 2002 }}"
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.toilettes
+            field: "/action"
+            data: {"bri_inc":100, "transitiontime":50}
+    # Decrease
+    - conditions:
+        - condition: template
+          value_template: "{{ trigger.event.data.event == 3002 }}"
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.toilettes
+            field: "/action"
+            data: {"bri_inc":-100, "transitiontime":50}
+    # Stop increase/decrease 
+    - conditions:
+      - condition: template
+        value_template: > 
+          {{ trigger.event.data.event == 2003 or
+              trigger.event.data.event == 3003 }}
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.living_room
+            field: "/action"
+            data: {"bri_inc":0}
+      # Off
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 4002 }}"
+      sequence:
+        - service: light.turn_off
+          data:
+            entity_id:
+              - light.toilettes

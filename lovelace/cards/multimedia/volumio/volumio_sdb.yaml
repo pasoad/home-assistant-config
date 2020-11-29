@@ -1,0 +1,8 @@
+type: custom:mini-media-player
+entity: media_player.volumiosdb
+group: true
+name: Salle de bain
+hide:
+  controls: true
+  power: true
+  info: true

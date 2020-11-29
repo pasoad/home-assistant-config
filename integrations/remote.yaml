@@ -1,0 +1,8 @@
+#
+# https://www.home-assistant.io/integrations/remote/
+#
+remote:
+  - platform: harmony
+    name: Harmony Hub
+    host: !secret ip_harmony_hub
+    activity: PowerOff

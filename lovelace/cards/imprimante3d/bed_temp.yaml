@@ -1,0 +1,8 @@
+type: history-graph
+entities:
+  - entity: sensor.longer_lk4_actual_bed_temp
+    name: Temp. actuelle du plateau
+  - entity: sensor.longer_lk4_target_bed_temp
+    name: Temp. voulue du plateau
+hours_to_show: 12
+refresh_interval: 0

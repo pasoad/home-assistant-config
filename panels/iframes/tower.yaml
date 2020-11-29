@@ -1,0 +1,5 @@
+tower:
+  title: 'Tower'
+  url: 'http://192.168.1.40'
+  icon: mdi:server
+

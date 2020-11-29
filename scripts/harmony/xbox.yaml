@@ -1,0 +1,7 @@
+xbox:
+  alias: Xbox One
+  sequence:
+  - data:
+      activity: "Xbox One"
+    entity_id: remote.harmony_hub
+    service: remote.turn_on

@@ -1,0 +1,22 @@
+input_select_harmony_hub:
+  alias: 'activité HARMONY'
+  sequence:
+  - service: remote.turn_on
+    data_template:
+      entity_id: remote.harmony_hub 
+      activity: >
+        {% if is_state("input_select.harmony_hub", "PowerOff") %}
+            -1
+        {% elif is_state("input_select.harmony_hub", "Xbox One") %}
+            42183996
+        {% elif is_state("input_select.harmony_hub", "Kodi raspberry") %}
+            42184050
+        {% elif is_state("input_select.harmony_hub", "Switch") %}
+            42183958
+        {% elif is_state("input_select.harmony_hub", "Chromecast") %}
+            42184030
+        {% elif is_state("input_select.harmony_hub", "TV") %}
+            43448776
+        {% elif is_state("input_select.harmony_hub", "PS4") %}
+            42184003
+        {% endif %}         

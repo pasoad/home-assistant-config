@@ -1,0 +1,6 @@
+platform: attributes
+friendly_name: dyson_oscillating
+attribute: oscillating
+#  unit_of_measurement: {unit_of_measurement}
+entities:
+  - fan.salon

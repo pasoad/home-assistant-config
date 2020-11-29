@@ -1,0 +1,17 @@
+alias: back_home_climate
+trigger:
+  - platform: state
+    entity_id: group.potellefamily
+    from: not_home
+    to: home
+action:
+  - service: climate.set_preset_mode
+    data:
+      entity_id: climate.netatmo_hall_d_entree
+      preset_mode: Schedule
+  - service: switch.turn_on
+    entity_id: switch.volumio_salle_de_bain
+  # - service: fan.set_speed
+  #   entity_id: fan.salon
+  #   data:
+  #     speed: AUTO

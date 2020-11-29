@@ -1,0 +1,15 @@
+type: entities
+entities:
+  - entity: sensor.openclose_14_battery_level
+    name: Door sensor Chambre de Jules
+  - entity: sensor.window_door_sensor_battery_level
+    name: Door sensor Salle de bain
+  - entity: sensor.tradfri_motion_sensor_battery_level
+    name: Détecteur de mouvement Salle de bain
+  - entity: sensor.tradfri_motion_sensor_toilettes_battery_level
+    name: Détecteur de mouvement Toilettes
+  - entity: sensor.tradfri_motion_sensor_hall_battery_level
+    name: Détecteur de mouvement Hall
+  - entity: sensor.vibration_chambre_parents_battery_level
+    name: Vibration sensor Porte chambre parents
+title: Divers Sensor

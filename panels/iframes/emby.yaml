@@ -1,0 +1,5 @@
+emby:
+  title: 'Emby'
+  url: 'http://192.168.1.40:8096'
+  icon: mdi:emby
+

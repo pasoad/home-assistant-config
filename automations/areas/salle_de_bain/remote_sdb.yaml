@@ -1,0 +1,52 @@
+alias: Télécommande de la salle de bain
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: tradfri_remote_control_sdb
+action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 2002 }}"
+      sequence:
+        - service: media_player.volume_up
+          data:
+            entity_id: media_player.volumiosdb
+    - conditions:
+        - condition: template
+          value_template: "{{ trigger.event.data.event == 3002 }}"
+      sequence:
+        - service: media_player.volume_down
+          data:
+            entity_id: media_player.volumiosdb
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 2001 }}"
+      sequence:
+        - service: media_player.volume_set
+          data:
+            entity_id: media_player.volumiosdb
+            volume_level: '0.60'
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 3001 }}"
+      sequence:
+        - service: media_player.volume_set
+          data:
+            entity_id: media_player.volumiosdb
+            volume_level: '0'
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 5002 }}"
+      sequence:
+        - service: switch.toggle
+          data:
+            entity_id: switch.on_off_salle_de_bain
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.event == 1002 }}"
+      sequence:
+        - service: light.toggle
+          data:
+            entity_id: light.salle_de_bain_2

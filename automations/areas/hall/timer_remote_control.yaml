@@ -1,0 +1,17 @@
+alias: timer_remote_control
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 1003
+    id: tradfri_on_off_switch_hall_2
+action:
+  - service: automation.turn_off
+    entity_id: automation.motion_off_hall
+  - service: light.turn_on
+    entity_id: light.hall_2
+  - delay: 00:50:00
+  - service: light.turn_off
+    entity_id: light.hall_2
+  - service: automation.turn_on
+    entity_id: automation.motion_off_hall

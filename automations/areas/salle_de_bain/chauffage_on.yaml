@@ -1,0 +1,27 @@
+alias: chauffage_on
+description: ''
+trigger:
+  - device_id: 42cc01f317a04062a1a234adb0ee3697
+    domain: binary_sensor
+    entity_id: binary_sensor.window_door_sensor
+    platform: device
+    type: not_opened
+condition:
+  - condition: time
+    after: '17:30:00'
+    before: '21:30:00'
+  - condition: device
+    device_id: 234ed81ef5a74619aec27026a6456054
+    domain: binary_sensor
+    entity_id: binary_sensor.tradfri_motion_sensor
+    type: is_motion
+action:
+  - service: switch.turn_on
+    entity_id: switch.on_off_salle_de_bain
+  - service: automation.turn_off
+    entity_id: automation.turn_off_spot_salle_de_bain_8_to_17
+  - service: automation.turn_off
+    entity_id: automation.turn_off_spot_salle_de_bain_17_to_22
+  - service: automation.turn_off
+    entity_id: automation.turn_off_spot_salle_de_bain_22_to_8
+

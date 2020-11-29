@@ -1,0 +1,14 @@
+alias: allumer_la_tv_salon
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 1002
+    id: on_off_switch_chambre_parents
+condition: []
+action:
+- service: script.turn_on
+  entity_id: script.chromecast
+- service: light.turn_on
+  entity_id: light.petites_lumieres_2

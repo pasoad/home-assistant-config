@@ -1,0 +1,3 @@
+entities:
+  - input_boolean.guest_mode
+type: entities

@@ -1,0 +1,10 @@
+ios:
+  push:
+    categories:
+      - name: Guest_Mode
+        identifier: 'guest_mode_ios'
+        actions:
+          - identifier: 'GUEST_MODE_YES'
+            title: 'oui'
+          - identifier: 'GUEST_MODE_NO'
+            title: 'non'

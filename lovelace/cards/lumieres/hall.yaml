@@ -1,0 +1,10 @@
+entities:
+  - entity: automation.motion_off_hall
+    icon: mdi:motion-sensor
+    name: Détecteur de mouvements
+  - input_boolean.timer_hall
+  - entity: light.lustre_devant_la_salle_de_bain
+  - entity: light.lustre_devant_les_toilettes
+show_header_toggle: false
+title: Hall
+type: entities

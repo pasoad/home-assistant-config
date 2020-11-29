@@ -1,0 +1,4 @@
+platform: group
+name: pa_phone
+services:
+  - service: notify.mobile_app_iphone_de_p_a

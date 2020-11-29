@@ -1,0 +1,7 @@
+type: picture-glance
+title: Impression en cours
+entities:
+  - binary_sensor.longer_lk4_printing
+  - sensor.longer_lk4_job_percentage
+camera_image: camera.octoprint
+

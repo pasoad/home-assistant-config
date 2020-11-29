@@ -1,0 +1,14 @@
+#
+# https://www.home-assistant.io/integrations/input_boolean/
+#
+input_boolean:
+  timer_hall:
+    name: Timer du hall
+    initial: off
+    icon: mdi:lightbulb
+  motion_desactivate:
+    name: Désactivation de la détection de mouvement
+    icon: mdi:motion-sensor
+  gest_mode:
+    name: Mode invité
+    icon: mdi:account-plus

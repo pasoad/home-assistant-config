@@ -1,0 +1,7 @@
+switch:
+  alias: Switch
+  sequence:
+  - data:
+      activity: "Switch"
+    entity_id: remote.harmony_hub
+    service: remote.turn_on

@@ -1,0 +1,10 @@
+volume_up:
+  alias: Volume Up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeUp
+        device: Onkyo AV Receiver
+        num_repeats: 3
+        delay_secs: 0.25

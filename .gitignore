@@ -1,0 +1,43 @@
+# Whitelist
+!*.yaml
+!.gitignore
+!*.md
+!automations/**
+
+# Generic ignores
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.pyc
+._*
+__pycache__
+
+# Folders ignores
+.cloud
+.storage
+deps
+node-red
+custom_components
+.ssh
+secret.yaml
+www
+
+# Files ignores
+options.xml
+OZW_Log.txt
+pyozw.sqlite
+scripts.yaml
+secrets.yaml
+zwcfg_*
+zwscene.xml
+known_devices.yaml
+.entries.json
+.homekit.state
+.ios.conf
+.spotify-token-cache
+
+# Ignore files created by IDE's
+.vscode
+.theia
+.Trash*

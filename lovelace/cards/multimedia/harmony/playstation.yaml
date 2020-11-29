@@ -1,0 +1,9 @@
+type: button
+tap_action:
+  action: toggle
+entity: script.ps4
+icon: 'mdi:sony-playstation'
+show_state: false
+show_icon: true
+show_name: false
+icon_height: 60px

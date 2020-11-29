@@ -1,0 +1,9 @@
+type: button
+tap_action:
+  action: toggle
+entity: script.tv
+icon: 'mdi:television'
+show_state: false
+show_icon: true
+show_name: false
+icon_height: 64px

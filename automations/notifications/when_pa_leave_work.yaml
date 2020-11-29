@@ -1,0 +1,19 @@
+alias: "when_pa_leave_work"
+trigger:
+  - platform: state
+    entity_id: person.p_a
+    from: travail_pa
+condition:
+  - condition: time
+    after: '17:00:00'
+    before: '20:00:00'
+    weekday:
+      - mon
+      - tue
+      - thu
+      - fri
+      - sat
+action:
+  - service: notify.mobile_app_bkl_l09
+    data_template:
+      message: "P.A. vient de partir du boulot"

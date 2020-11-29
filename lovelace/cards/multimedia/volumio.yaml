@@ -1,0 +1,6 @@
+type: entities
+title: Volumio
+entities:
+  - !include /config/lovelace/cards/multimedia/volumio/volumio_salon.yaml
+  - !include /config/lovelace/cards/multimedia/volumio/volumio_sdb.yaml
+  - !include /config/lovelace/cards/multimedia/volumio/volumio_jules.yaml

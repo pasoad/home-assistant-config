@@ -1,0 +1,10 @@
+alias: batterie motion sensor salle de bain
+trigger:
+  platform: numeric_state
+  entity_id: sensor.tradfri_motion_sensor_battery_level
+  below: 73
+action:
+  service: notify.pa_phone
+  data_template:
+    message: La batterie du détecteur de mouvement de la salle de bain est à moins
+      de 10%

@@ -1,0 +1,33 @@
+alias: leave_home
+trigger:
+  - platform: state
+    entity_id: group.potellefamily
+    from: home
+    to: not_home
+condition:
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
+action:
+  - service: climate.set_preset_mode
+    data:
+      entity_id: climate.netatmo_hall_d_entree
+      preset_mode: away
+  - service: light.turn_off
+    entity_id: light.all_lights_2
+  - service: remote.turn_off
+    entity_id: remote.harmony_hub
+  - service: media_player.media_pause
+    entity_id: media_player.volumiosalon
+  - service: media_player.media_pause
+    entity_id: media_player.volumiosdb
+  - service: media_player.media_pause
+    entity_id: media_player.volumiojules
+  - service: media_player.media_pause
+    entity_id: media_player.spotify_emiliou
+  - service: media_player.media_pause
+    entity_id: media_player.spotify_pasoad
+  - service: fan.turn_off
+    entity_id: fan.salon
+  - service: switch.turn_off
+    entity_id: switch.volumio_salle_de_bain

@@ -1,0 +1,12 @@
+harmony_hub:
+  name: Harmony Hub
+  options:
+    - PowerOff
+    - Xbox One
+    - Kodi raspberry
+    - Switch
+    - Chromecast
+    - TV
+    - PS4
+  initial: PowerOff
+  icon: mdi:monitor

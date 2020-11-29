@@ -1,0 +1,23 @@
+alias: fermeture_chambre_jules
+description: ''
+
+trigger:
+- device_id: 646757f80d6048d5905b7bdec046b2b7
+  domain: binary_sensor
+  entity_id: binary_sensor.openclose_14
+  platform: device
+  type: closed
+condition:
+- after: '20:00:00'
+  before: '23:59:00'
+  condition: time
+action:
+- device_id: 8c448f0353b64ff3b036467f01dc8803
+  domain: light
+  entity_id: light.lampe_du_bureau_rgb
+  type: toggle
+- delay: 00:00:01
+- device_id: 8c448f0353b64ff3b036467f01dc8803
+  domain: light
+  entity_id: light.lampe_du_bureau_rgb
+  type: toggle

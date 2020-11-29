@@ -1,0 +1,7 @@
+eteindre_tv:
+  alias: Eteindre la TV
+  sequence:
+    - data:
+        activity: "PowerOff"
+      entity_id: remote.harmony_hub
+      service: remote.turn_on

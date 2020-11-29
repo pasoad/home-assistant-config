@@ -1,0 +1,54 @@
+hassioTurnOff:
+  action:
+    service: python_script.turn_on_off
+    data_template:
+      entity_id: "{{ entitie }}"
+      action: "turn_off"
+hassioTurnOn:
+  action: 
+    service: python_script.turn_on_off
+    data_template:
+      entity_id: "{{ entitie }}"
+      action: "turn_on"
+hassioAddToShoppingList:
+  action: 
+    service: shopping_list.add_item
+    data_template:
+      name: "{{ articles }}"
+  speech:
+    type: plain
+    text: "OK, j'ajoute {{ articles }} a votre liste de course"
+hassioSetLight:
+  action: 
+    service: python_script.set_light
+    data_template:
+      entity_id: "{{ entitie }}"
+      brightness_pct: "{{ luminosite }}"
+hassioHeaterTemp:
+  action:
+    service: climate.set_temperature
+    data_template:
+      entity_id: "climate.salon"
+      temperature: "{{ temp }}"
+      operation_mode: "heat"
+  speech:
+    type: plain
+    text: "OK, je règle le thermostat sur {{ temp }} degrés"
+hassioHeaterMode:
+  action:
+    service: climate.operation_mode
+    data_template:
+      entity_id: "climate.salon"
+      operation_mode: "{{ mode }}"
+  speech:
+    type: plain
+    text: "OK, je règle le thermostat sur {{ mode }}"
+hassioTime:
+  speech:
+    type: plain
+    text: "Il est {{ now().hour}} heure {{ now().minute }}"
+hassioGetTemp:
+  action: 
+    service: python_script.get_temp
+    data_template:
+      entity_id: "{{ entitie }}"

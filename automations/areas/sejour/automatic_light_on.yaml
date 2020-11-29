@@ -1,0 +1,41 @@
+alias: allumage automatique des lumières du séjour
+description: ''
+trigger:
+- entity_id: sensor.daylight
+  platform: state
+  to: golden_hour_2
+condition:
+- condition: state
+  entity_id: group.potellefamily
+  state: home
+action:
+- entity_id: light.petites_lumieres_2
+  service: light.turn_on
+mode: single
+
+#alias: allumage automatique des lumières du séjour
+#trigger:
+#  platform: state
+#  entity_id: sun.sun
+#  to: below_horizon
+
+# - platform: numeric_state
+#   entity_id: sun.sun
+#   value_template: '{{ state_attr(''sun.sun'', ''elevation'') }}'
+#   below: 3.5
+
+#  platform: state
+#  entity_id: sensor.daylight
+#  to: golden_hour_2
+
+#  platform: template
+#  value_template: '{{ state_attr('sensor.daylight', 'golden_hour_2') == true }}'
+
+#condition:
+#  condition: state
+#  entity_id: group.fotellefamily
+#  state: home
+#action:
+#  service: light.turn_on
+#  entity_id: light.petites_lumieres_2
+

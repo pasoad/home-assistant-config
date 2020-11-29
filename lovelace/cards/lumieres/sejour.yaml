@@ -1,0 +1,12 @@
+entities:
+  - entity: light.lustre_du_sejour
+  - entity: light.lampe_en_bois
+    icon: 'mdi:floor-lamp'
+  - entity: switch.lampe_rose
+    icon: 'mdi:floor-lamp'
+  - entity: light.lampe_a_gauche_de_la_tele
+    icon: 'mdi:floor-lamp'
+  - entity: light.lampe_du_bureau_rgb
+    icon: 'mdi:floor-lamp'    
+title: Séjour
+type: entities

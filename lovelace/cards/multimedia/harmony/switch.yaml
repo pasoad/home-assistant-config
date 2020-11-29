@@ -1,0 +1,9 @@
+type: button
+tap_action:
+  action: toggle
+entity: script.switch
+icon: 'mdi:nintendo-switch'
+show_state: false
+show_icon: true
+show_name: false
+icon_height: 50px

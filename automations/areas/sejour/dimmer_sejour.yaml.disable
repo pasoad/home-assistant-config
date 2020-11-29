@@ -1,0 +1,40 @@
+alias: 'Dimmer Sejour'
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: tradfri_on_off_switch_sejour
+action:
+  - choose:
+    # Increase
+    - conditions:
+        - condition: template
+          value_template: "{{ trigger.event.data.event == 1001 }}"
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.lustre_du_sejour
+            field: "/action"
+            data: {"brightness":254, "transitiontime":50}
+    # Decrease
+    - conditions:
+        - condition: template
+          value_template: "{{ trigger.event.data.event == 2001 }}"
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.lustre_du_sejour
+            field: "/action"
+            data: {"brightness":-254, "transitiontime":50}
+    # Stop increase/decrease 
+    - conditions:
+      - condition: template
+        value_template: > 
+          {{ trigger.event.data.event == 1003 or
+              trigger.event.data.event == 2003 }}
+      sequence:
+        - service: deconz.configure
+          data:
+            entity: light.living_room
+            field: "/action"
+            data: {"brightness":0}

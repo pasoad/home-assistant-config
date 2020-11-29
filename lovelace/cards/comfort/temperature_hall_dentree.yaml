@@ -1,0 +1,8 @@
+type: custom:mini-graph-card
+entities: 
+  - sensor.netatmo_hall_d_entree_current_temperature
+name: Hall d'entrée
+points: true
+hours_to_show: 24
+points_per_hour: 0.5
+unit: °C

@@ -1,0 +1,8 @@
+mute_harmony:
+  alias: Mute Harmony
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Mute
+        device: Onkyo AV Receiver

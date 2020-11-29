@@ -1,0 +1,7 @@
+entities:
+  - entity: switch.on_off_radio_de_jules
+    name: Radio de Jules On/Off
+  - entity: switch.volumio_salle_de_bain
+    name: Radio de la Salle de bain
+type: entities
+show_header_toggle: false

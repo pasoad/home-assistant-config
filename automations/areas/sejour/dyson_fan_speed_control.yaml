@@ -1,0 +1,9 @@
+alias: Dyson fan speed controller
+trigger:
+- entity_id: input_number.dyson_fan_speed
+  platform: state
+action:
+- data_template:
+    speed: '{{states(''input_number.dyson_fan_speed'')|int}}'
+  entity_id: fan.salon
+  service: fan.set_speed

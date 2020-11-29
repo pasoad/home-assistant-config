@@ -1,0 +1,12 @@
+alias: chauffage_toggle
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 5002
+    id: tradfri_remote_control_sdb
+condition: []
+action:
+  - service: switch.toggle
+    entity_id: switch.on_off_salle_de_bain

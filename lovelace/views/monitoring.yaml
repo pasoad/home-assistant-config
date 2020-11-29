@@ -1,0 +1,31 @@
+title: Monitoring
+icon: 'mdi:google-analytics'
+path: monitoring
+visible:
+  - user: a443888618b748ca8c7e994d13d4ae3f
+  - user: c8a3792a07924103b5d001de9ce0bfb1
+  
+badges:
+  - entity: 'person.emilie'
+    entity_picture: /local/images/emiliou.jpg
+  - entity: person.p_a
+    entity_picture: /local/images/pa.jpg
+  - entity: binary_sensor.updater
+  - entity: sensor.hacs
+  
+cards:
+  - type: vertical-stack
+    cards:
+      - !include /config/lovelace/cards/monitoring/guest_mode.yaml
+      - !include /config/lovelace/cards/monitoring/linky.yaml
+      - !include /config/lovelace/cards/monitoring/speedtest.yaml
+      - !include /config/lovelace/cards/monitoring/waze.yaml
+
+  - type: vertical-stack
+    cards:
+      - !include /config/lovelace/cards/monitoring/batteries_thermostat_vannes.yaml
+      - !include /config/lovelace/cards/monitoring/batteries_interrupteurs.yaml
+      - !include /config/lovelace/cards/monitoring/batteries_sensor_divers.yaml
+  
+
+

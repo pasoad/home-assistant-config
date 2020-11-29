@@ -1,0 +1,10 @@
+platform: systemmonitor
+resources:
+  - type: disk_use_percent
+    arg: /home
+  - type: disk_use
+  - type: disk_free
+  - type: memory_use
+  - type: memory_free
+  - type: processor_use
+  - type: processor_temperature

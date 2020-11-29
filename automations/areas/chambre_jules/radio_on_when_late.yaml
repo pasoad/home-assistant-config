@@ -1,0 +1,13 @@
+alias: radio_on_when_late
+trigger:
+  - platform: state
+    entity_id: group.potellefamily
+    from: not_home
+    to: home
+condition:
+  - condition: time
+    after: '19:30:00'
+    before: '23:00:00'
+action:
+  - service: switch.turn_on
+    entity_id: switch.on_off_radio_de_jules

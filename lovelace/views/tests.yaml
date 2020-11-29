@@ -1,0 +1,175 @@
+title: Test
+visible:
+  - user: a443888618b748ca8c7e994d13d4ae3f
+cards:
+
+  - type: 'custom:auto-entities'
+    card:
+      title: Batteries
+      type: 'custom:battery-state-card'
+      sort_by_level: asc
+    filter:
+      include:
+        - entity_id: sensor.*.battery_level*
+
+  - type: vertical-stack
+    title: unRAID Server
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mod-card
+            card: 
+              type: picture
+              image: https://rlv.zcache.com/unraid_orange_logo_on_black_sticker-r4be3a58326d140ee9701f822f65e66c2_0ugmc_8byvr_540.jpg
+            style:                 
+              border-radius: 5px
+          - type: vertical-stack
+            cards:  
+              - type: custom:entity-attributes-card
+                heading_name: Attributs
+                heading_state: Etats
+                filter:
+                  include:
+                    - key: binary_sensor.unraid_server.cpu                  
+                    - key: binary_sensor.unraid_server.memory
+                    - key: binary_sensor.unraid_server.motherboard
+                    - key: binary_sensor.unraid_server.arrayStatus
+                    - key: binary_sensor.unraid_server.diskSpace
+                    - key: binary_sensor.unraid_server.arrayProtection                                   
+              - type: entities
+                show_header_toggle: false
+                entities:            
+                  - switch.unraid_array                                
+      - type: conditional
+        conditions:
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unavailable"
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unknown"    
+        card:
+            type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style: 
+              border-radius: 5px
+            severity:
+            - value: 50
+              color: '#3bb3ee'
+            - value: 80
+              color: '#e7a24a'
+            - value: 100
+              color: '#ff0000'                        
+            entities:
+              - entity: sensor.glances_unraid_disk_used_percent
+                title: Disk
+                max: 100            
+              - entity: sensor.glances_unraid_cpu_used
+                title: CPU
+                max: 100             
+      - type: conditional
+        conditions:
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unavailable"
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unknown"    
+        card:
+            type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style: 
+              border-radius: 5px
+            severity:
+            - value: 50
+              color: '#3bb3ee'
+            - value: 80
+              color: '#e7a24a'
+            - value: 100
+              color: '#ff0000'                        
+            entities:
+              - entity: sensor.glances_unraid_swap_used_percent
+                title: SWAP             
+                max: 100
+              - entity: sensor.glances_unraid_ram_used_percent
+                title: RAM
+                max: 100
+      - type: conditional
+        conditions:
+          - entity: sensor.glances_unraid_containers_active
+            state_not: '0'
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unavailable"
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unknown"                
+        card:
+            type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.glances_unraid_containers_ram_used
+                title: Docker RAM 
+                max: 10000                
+              - entity: sensor.glances_unraid_containers_cpu_used
+                title: Docker CPU                   
+      - type: conditional
+        conditions:
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unavailable"
+          - entity: sensor.glances_unraid_disk_used_percent
+            state_not: "unknown"    
+        card:
+            type: custom:bar-card
+            align: left
+            title_position: left
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            severity:
+            - value: 50
+              color: '#3bb3ee'
+            - value: 80
+              color: '#e7a24a'
+            - value: 100
+              color: '#ff0000'                        
+            entities:
+              - entity: sensor.glances_unraid_containers_active 
+                title: Containers    
+                max: 40   
+      - type: custom:auto-entities
+        filter:
+          include:
+            - entity_id: switch.unraid_vm_*   
+          exclude:
+            - entity_id: switch.unraid_vm_*_usb*               
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: Virtual Machine Control   
+      - type: custom:auto-entities
+        filter:  
+          include:
+            - entity_id: switch.unraid_vm_*_usb*               
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: Virtual Machine  USB Control   
+      - type: custom:auto-entities
+        filter:
+          include:
+            - entity_id: switch.unraid_docker_*   
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: Docker Control

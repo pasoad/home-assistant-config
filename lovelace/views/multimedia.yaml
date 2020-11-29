@@ -1,0 +1,48 @@
+title: Multimédia
+icon: 'mdi:theater'
+path: multimedia
+
+visible:
+  - user: a443888618b748ca8c7e994d13d4ae3f
+  - user: c8a3792a07924103b5d001de9ce0bfb1
+
+cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+      - !include /config/lovelace/cards/multimedia/harmony/tv.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/fire_stick.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/switch.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/xbox.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/playstation.yaml
+
+    - type: horizontal-stack
+      cards:
+      - !include /config/lovelace/cards/multimedia/harmony/music.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/volume_down.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/mute.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/volume_up.yaml
+      - !include /config/lovelace/cards/multimedia/harmony/power_off.yaml
+
+    - type: horizontal-stack
+      cards:
+        - !include /config/lovelace/cards/multimedia/radios.yaml
+
+    - !include /config/lovelace/cards/multimedia/spotify_pasoad.yaml
+    - !include /config/lovelace/cards/multimedia/spotify_emiliou.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include /config/lovelace/cards/multimedia/volumio.yaml
+
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            title: Snapcast
+            entities:
+              - !include /config/lovelace/cards/multimedia/snapcast/snapcast_salon.yaml
+              - !include /config/lovelace/cards/multimedia/snapcast/snapcast_sdb.yaml
+              - !include /config/lovelace/cards/multimedia/snapcast/snapcast_jules.yaml

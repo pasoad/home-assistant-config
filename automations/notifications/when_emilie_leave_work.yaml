@@ -1,0 +1,25 @@
+alias: "when_emilie_leave_work"
+trigger:
+  - platform: state
+    entity_id: person.emilie
+    from: travail_emilie
+condition:
+  - condition: time
+    after: '09:00:00'
+    before: '12:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+action:
+  - service: notify.mobile_app_iphone_de_p_a
+    data_template:
+      message: "Emilie vient de partir du boulot"
+  # - service: tts.google_translate_say
+  #   entity_id: media_player.onkyo_tx_nr575e_eea182_3
+  #   data:
+  #     message: 'Youpie! Maman sera bientôt à la maison!'
+  #     language: 'fr'

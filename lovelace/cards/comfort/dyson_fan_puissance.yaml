@@ -1,0 +1,9 @@
+type: conditional
+conditions:
+  - entity: switch.fan_auto
+    state: 'off'
+card:
+  entities:
+    - entity: input_number.dyson_fan_speed
+      name: Puissance
+  type: entities

@@ -1,0 +1,5 @@
+#
+# https://www.home-assistant.io/docs/configuration/customizing-devices/
+#
+homeassistant:
+  customize: !include_dir_merge_named ../customizations/

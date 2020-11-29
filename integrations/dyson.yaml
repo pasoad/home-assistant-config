@@ -1,0 +1,7 @@
+dyson:
+  username: !secret DYSON_USERNAME
+  password: !secret DYSON_PASSWORD
+  language: FR
+  devices:
+    - device_id: !secret DYSON_TP02_ID
+      device_ip: !secret DYSON_TP02_IP

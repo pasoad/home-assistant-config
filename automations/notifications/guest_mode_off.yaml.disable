@@ -1,0 +1,13 @@
+alias: "guest_mode_off"
+trigger:
+  - platform: state
+    entity_id: person.p_a
+    to: home
+condition:
+  - condition: time
+    after: '18:00:00'
+    before: '19:00:00'
+    weekday: sat
+action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.guest_mode

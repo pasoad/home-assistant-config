@@ -1,0 +1,11 @@
+type: entities
+entities:
+  - entity: sensor.netatmo_hall_d_entree_battery_level
+    name: Thermostat
+  - entity: sensor.netatmo_chambre_parents_battery_level
+    name: Chambre parents
+  - entity: sensor.netatmo_chambre_jules_battery_level
+    name: Chambre de Jules
+  - entity: sensor.netatmo_chambre_d_amis_battery_level
+    name: '"La pièce"'
+title: Batteries termostat/vannes

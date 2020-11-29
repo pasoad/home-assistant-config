@@ -1,0 +1,8 @@
+alias: '[Input_select] met a jour HARMONY'
+initial_state: true
+trigger:
+- platform: state
+  entity_id: input_select.harmony_hub
+action:
+- service: script.turn_on
+  entity_id: script.input_select_harmony_hub

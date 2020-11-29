@@ -1,0 +1,33 @@
+alias: sablier_dent
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 4002
+    id: tradfri_remote_control_sdb
+condition: []
+action:
+  - service: light.turn_off
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_on
+    entity_id:  light.spot_c
+  - delay: 00:02:00
+  - service: light.turn_off
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_on
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_off
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_on
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_off
+    entity_id:  light.spot_c
+  - delay: 00:00:01
+  - service: light.turn_on
+    entity_id:  light.spot_c

@@ -1,0 +1,12 @@
+platform: synologydsm
+host: !secret ip_synology
+username: !secret synology_username
+password: !secret synology_psw
+monitored_conditions:
+  - cpu_total_load
+  - memory_real_usage
+  - network_up
+  - volume_size_used
+  - volume_percentage_used
+  - cpu_total_load
+  - memory_real_usage

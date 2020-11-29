@@ -1,0 +1,19 @@
+alias: evening Jules playlist
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 5002
+    id: tradfri_remote_control_ch_jules
+condition: []
+action:
+  - service: media_player.select_source
+    entity_id: media_player.spotify_pasoad
+    data:
+      source: Volumiojules_3
+  - service: media_player.play_media
+    entity_id: media_player.spotify_pasoad
+    data:
+      media_content_type: playlist
+      media_content_id: spotify:playlist:3w0JBF4naOiTSc85H73Mtw

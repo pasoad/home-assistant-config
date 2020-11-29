@@ -1,0 +1,5 @@
+volumio:
+  title: 'Volumio'
+  url: 'http://192.168.1.11'
+  icon: mdi:disc
+

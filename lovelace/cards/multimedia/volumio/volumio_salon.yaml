@@ -1,0 +1,8 @@
+type: custom:mini-media-player
+entity: media_player.volumiosalon
+group: true
+name: Salon
+hide:
+  controls: true
+  power: true
+  info: true

@@ -1,0 +1,4 @@
+entities:
+  - entity: sensor.home_work_pa
+    name: Temps pour aller chez Media en voiture
+type: entities
