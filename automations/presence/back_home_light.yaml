@@ -2,8 +2,8 @@ alias: back_home_light
 trigger:
   - platform: state
     entity_id: group.potellefamily
-    from: not_home
-    to: home
+    from: away
+    to: not_home
 condition:
   - condition: state
     entity_id: sensor.daylight

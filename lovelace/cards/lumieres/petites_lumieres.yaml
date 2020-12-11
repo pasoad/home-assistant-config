@@ -5,6 +5,9 @@ entities:
     icon: mdi:led-strip-variant
   - entity: scene.ambiance_chill_ordi
     name: Ambiance chill ordi
+  - entity: switch.on_off_sapin
+    name: Sapin
+    icon: mdi:string-lights
 title: Lumières d'appoint
 show_header_toggle: false
 type: entities
