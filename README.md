@@ -4,8 +4,13 @@ First of all, i'm not a dev. So i'm prety sure they are a lot of mistakes for a 
 
 ## Screenshots
 
-![Lumières](https://raw.githubusercontent.com/pasoad/home-assistant-config/main/screenshots/2020-11-29%2022_08_45-Home%20Assistant.png?token=ALFI7MQR37TPJ7ALCRXHYIS7YQOAK)
-![Multimedia](https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_59-Home%20Assistant.png)
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_45-Home%20Assistant.png" width="450"/>
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_59-Home%20Assistant.png" width="450"/>
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_09_14-Home%20Assistant.png" width="450"/>
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_09_34-Home%20Assistant.png" width="450"/>
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_09_53-Home%20Assistant.png" width="450"/>
+
+
 
 ## Structure of my HA's config
 
