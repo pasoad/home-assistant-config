@@ -5,7 +5,7 @@ First of all, i'm not a dev. So i'm prety sure they are a lot of mistakes for a 
 ## Screenshots
 
 ![Lumières](https://raw.githubusercontent.com/pasoad/home-assistant-config/main/screenshots/2020-11-29%2022_08_45-Home%20Assistant.png?token=ALFI7MQR37TPJ7ALCRXHYIS7YQOAK)
-![Lumières](/screenshots/2020-11-29 22_08_45-Home Assistant.png "Lumières")
+![Multimedia](https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_59-Home%20Assistant.png)
 
 ## Structure of my HA's config
 
