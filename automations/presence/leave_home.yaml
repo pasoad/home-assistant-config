@@ -31,3 +31,6 @@ action:
     entity_id: fan.salon
   - service: switch.turn_off
     entity_id: switch.volumio_salle_de_bain
+  - service: notify.mobile_app_iphone_de_p_a
+    data_template:
+      message: C'est bon, tout est éteint!

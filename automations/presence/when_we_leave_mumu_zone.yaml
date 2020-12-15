@@ -14,6 +14,6 @@ action:
     data:
       entity_id: climate.netatmo_hall_d_entree
       preset_mode: Schedule
-  - service: notify.mobile_app_bla_l09
+  - service: notify.mobile_app_iphone_de_p_a
     data_template:
       message: "J'ai remarqué que vous étiez sur le chemin du retour et j'active le chauffage :)"

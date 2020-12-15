@@ -1,4 +1,4 @@
-alias: guest_mode_sat_morning_ios
+alias: guest_mode_sat_ios_morning
 trigger:
   platform: time
   at: '07:50:00'
@@ -10,8 +10,8 @@ action:
   data:
     title: Guest mode
     message: Faut'il activer le mode invité ?
-      data:
-        push:
-          category: "Guest_Mode"
+    data:
+      push:
+        category: guest_mode_ios
         
     

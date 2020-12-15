@@ -1,0 +1,11 @@
+alias: "guest_mode_sat_ios_no"
+initial_state: true
+hide_entity: true
+trigger:
+  platform: event
+  event_type: ios.notification_action_fired
+  event_data:
+    actionName: 'GUEST_MODE_NO'
+action:
+- service: input_boolean.turn_off
+  entity_id: input_boolean.guest_mode

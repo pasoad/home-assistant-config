@@ -1,7 +1,7 @@
 ios:
   push:
     categories:
-      - name: Guest_Mode
+      - name: "Guest_Mode"
         identifier: 'guest_mode_ios'
         actions:
           - identifier: 'GUEST_MODE_YES'

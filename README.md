@@ -5,8 +5,8 @@ First of all, i'm not a dev. So i'm prety sure they are a lot of mistakes for yo
 ## Screenshots
 
 <div alt="centered image">
-<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_45-Home%20Assistant.png" width="350" hspace="5">
-<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_59-Home%20Assistant.png" width="350" hspace="5">
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_45-Home%20Assistant.png" width="450" hspace="5">
+<img src="https://github.com/pasoad/home-assistant-config/blob/main/screenshots/2020-11-29%2022_08_59-Home%20Assistant.png" width="450" hspace="5">
 </div>
 
 <div alt="centered image">
