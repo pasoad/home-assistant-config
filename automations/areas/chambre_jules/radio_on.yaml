@@ -9,3 +9,8 @@ condition:
 action:
   - service: switch.turn_on
     entity_id: switch.on_off_radio_de_jules
+  - delay: 00:05:00
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.volumiojules
+      volume_level: '0.80'

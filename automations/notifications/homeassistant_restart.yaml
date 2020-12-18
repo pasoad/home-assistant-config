@@ -1,0 +1,6 @@
+alias: Home Assistant Restart Notification
+description: ''
+use_blueprint:
+  path: gregoryduckworth/restart_notification.yaml
+  input:
+    notify_device: 112e949214aa11eb957435e8de217b01

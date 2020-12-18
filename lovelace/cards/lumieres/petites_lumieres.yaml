@@ -5,6 +5,9 @@ entities:
     icon: mdi:led-strip-variant
   - entity: scene.ambiance_chill_ordi
     name: Ambiance chill ordi
+  - entity: scene.ambiance_film
+    name: Ambiance film
+    icon: mdi:movie
   - entity: switch.on_off_sapin
     name: Sapin
     icon: mdi:string-lights

@@ -1,0 +1,46 @@
+name: ambiance_film
+entities:
+  light.lustre_cuisine:
+    brightness: 3
+    is_deconz_group: false
+    friendly_name: Lustre cuisine
+    supported_features: 41
+    state: 'on'
+  light.lampe_du_bureau_rgb:
+    min_mireds: 153
+    max_mireds: 555
+    effect_list:
+    - colorloop
+    is_deconz_group: false
+    friendly_name: Lampe du bureau RGB
+    supported_features: 63
+    state: 'off'
+  switch.on_off_led_bureau:
+    friendly_name: On/Off LED bureau
+    state: 'off'
+  light.lampe_en_bois:
+    is_deconz_group: false
+    friendly_name: Lampe en bois
+    supported_features: 41
+    state: 'off'
+  light.lustre_sejour_2:
+    effect_list:
+    - colorloop
+    is_deconz_group: true
+    all_on: false
+    friendly_name: Lustre séjour
+    supported_features: 45
+    state: 'off'
+  light.lampe_a_gauche_de_la_tele:
+    brightness: 125
+    is_deconz_group: false
+    friendly_name: Lampe à gauche de la télé
+    supported_features: 41
+    state: 'on'
+  switch.lampe_rose:
+    friendly_name: Lampe rose
+    state: 'on'
+  switch.on_off_sapin:
+    friendly_name: On/Off sapin
+    state: 'off'
+icon: mdi:movie

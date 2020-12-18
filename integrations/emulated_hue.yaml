@@ -1,0 +1,13 @@
+emulated_hue:
+  listen_port: 80
+  exposed_domains:
+    – light
+    – switch
+    – scene
+  entities:
+    light.lustre_du_sejour:
+     name: "Lustre du séjour"
+     hidden: false
+    scene.ambiance_film:
+     name: "Ambiance film"
+     hidden: false
