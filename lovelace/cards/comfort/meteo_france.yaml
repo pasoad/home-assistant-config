@@ -1,0 +1,10 @@
+type: 'custom:meteo-france-weather-card'
+name: Saint Genis
+entity: weather.saint_genis_pouilly
+rainForecastEntity: sensor.saint_genis_pouilly_next_rain
+freezeChanceEntity: sensor.saint_genis_pouilly_freeze_chance
+rainChanceEntity: sensor.saint_genis_pouilly_rain_chance
+snowChanceEntity: sensor.saint_genis_pouilly_snow_chance
+thunderChanceEntity: sensor.saint_genis_pouilly_thunder_chance
+alertEntity: sensor.saint_genis_pouilly_weather_alert
+uvEntity: sensor.saint_genis_pouilly_uv

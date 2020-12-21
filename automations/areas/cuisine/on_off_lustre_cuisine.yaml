@@ -1,0 +1,14 @@
+alias: all_off
+description: ''
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    event: 1002
+    id: tradfri_on_off_switch_cuisine
+condition: []
+action:
+- service: light.turn_on
+  data:
+    entity_id: light.lustre_cuisine
+    brightness: 254

@@ -8,15 +8,17 @@ visible:
   - user: c8a3792a07924103b5d001de9ce0bfb1
 
 cards:
-  - !include /config/lovelace/cards/comfort/thermostat.yaml
+
+  - type: vertical-stack
+    cards:
+    - !include /config/lovelace/cards/comfort/thermostat.yaml
+    - !include /config/lovelace/cards/comfort/meteo_france.yaml
 
   - type: vertical-stack
     cards:
     - !include /config/lovelace/cards/comfort/dyson_fan.yaml
     - !include /config/lovelace/cards/comfort/dyson_fan_puissance.yaml
 
-  - type: vertical-stack
-    cards:
     - type: horizontal-stack
       cards:
       - !include /config/lovelace/cards/comfort/temperature_hall_dentree.yaml

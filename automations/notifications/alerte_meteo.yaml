@@ -1,0 +1,32 @@
+alias: "alerte_meteto"
+trigger:
+  - platform: state
+    entity_id: sensor.01_weather_alert
+condition: []
+action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sensor.01_weather_alert
+        state: ['Jaune', 'Orange', 'Rouge'] # Filtre le 'unavailable'
+      sequence:
+        - service: notify.mobile_app_iphone_de_p_a
+          data_template:
+            message: "Alerte météo {{states('sensor.01_weather_alert')}} en cours:\n
+              {%- for attr in ['Vent violent', 'Pluie-inondation', 'Orages', 'Inondation', 'Neige-verglas',
+                              'Canicule', 'Grand-froid', 'Avalanches', 'Vagues-submersion'] -%}
+              {%- if state_attr('sensor.01_weather_alert', attr) != 'Vert' and state_attr('sensor.01_weather_alert', attr) != None %}\n
+              - {{attr}} : {{state_attr('sensor.01_weather_alert', attr)}}
+              {%- endif -%}
+              {% endfor -%}"
+    - conditions:
+      - condition: state
+        entity_id: sensor.01_weather_alert
+        state: 'Vert'
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'unavailable' }}"
+      sequence:
+        - service: notify.mobile_app_iphone_de_p_a
+          data_template:
+            message: "Fin de l'alerte météo."
+
