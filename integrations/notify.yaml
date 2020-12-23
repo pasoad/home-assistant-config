@@ -2,12 +2,6 @@
 # https://www.home-assistant.io/integrations/notify/
 #
 notify:
-#  - platform: telegram
-#    name: telegram_bot
-#    chat_id: !secret telegram_chat_id
-  # - name: potelle_familly_smartphones
-  #   platform: group
-  #   services:
-  #     - service: notify.mobile_app_mate10pro
-  #     - service: notify.mobile_app_honorview10
-      
+  - platform: telegram
+    name: telegram_bot
+    chat_id: !secret telegram_chat_id

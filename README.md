@@ -1,4 +1,13 @@
-Welcome to my humble Home Assistant configuration! / Bienvenue dans ma configuration Home Assistant!
+
+[![Discord francophone][discord-shield-fr]][discord-fr]
+[![Forum francophone][forum-shield-fr]][forum-fr]
+[![Awesome francophone][awesome-shield]][awesome-fr]
+
+
+[![Official Discord][discord-shield]][discord]
+[![Official community Forum][forum-shield]][forum]
+
+Welcome to my humble Home Assistant configuration! / Bienvenue dans mon humble configuration Home Assistant!
 
 [Here](#my-home-assistant-config-in-english) to continue in English
 
