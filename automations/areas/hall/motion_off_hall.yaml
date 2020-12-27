@@ -1,3 +1,7 @@
+#
+# Turn off hall lights when no motions detected after 1 minute.
+# Eteindre les lumières du hall quand il n'y a plus de mouvements détectés dans le hall.
+#
 alias: motion_off_hall
 trigger:
   platform: state
