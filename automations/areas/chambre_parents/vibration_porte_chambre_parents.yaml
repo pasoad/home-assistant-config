@@ -1,0 +1,67 @@
+#
+# Help to power on lights in the hall with a vibration sensor on the bedroom door. Because sometimes, there is a delay with the motion sensor in the hall.
+# Aide pour allumer les lumières du hall avec un cappteur de vibrations sur la porte de la chambre. Parce que quelques fois, il y a un délais avec le détecteur de mouvement du hall.
+#
+alias: vibration_porte_chambre_parents
+trigger:
+  type: vibration
+  platform: device
+  device_id: 30152147d67bfca83967ca1911c3c2eb
+  entity_id: binary_sensor.vibration_chambre_parents
+  domain: binary_sensor
+action:
+  - choose:
+    - conditions:
+      - condition: time
+        after: '08:00:00'
+        before: '20:30:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 200
+    - conditions:
+      - condition: time
+        after: '20:30:00'
+        before: '23:50:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 60
+    - conditions:
+      - condition: time
+        after: '23:50:00'
+        before: '04:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 30
+    - conditions:
+      - condition: time
+        after: '04:00:00'
+        before: '05:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 100
+    - conditions:
+      - condition: time
+        after: '05:00:00'
+        before: '07:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 30
+    - conditions:
+      - condition: time
+        after: '07:00:00'
+        before: '08:00:00'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.hall_2
+            brightness: 100

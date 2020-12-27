@@ -1,3 +1,7 @@
+#
+# Automatically power off the volumio player (with a Tradfri switch) in my son's bedroom at 21:30 when we are at home.
+# Eteindre automatiquement le player volumio (avec un switch Tradfri) dans la chambre de mon fils à 21:30 quand nous sommes chez nous.
+#
 alias: "radio_off"
 trigger:
   - platform: time

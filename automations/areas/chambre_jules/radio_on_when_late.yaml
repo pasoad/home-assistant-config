@@ -1,3 +1,7 @@
+#
+# Power on volumio when we're coming home between 19:30 and 23:00
+# Allumer le player volumier quand nous rentrons entre 19:30 et 23:00
+#
 alias: radio_on_when_late
 trigger:
   - platform: state

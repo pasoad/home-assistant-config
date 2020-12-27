@@ -1,5 +1,8 @@
+#
+# Using a Tradfri 5 button remote to stop the playlist in my son's bedroom.
+# Utilisation d'une télécommande Tradfri pour arrêter la playlist dans la chambre de mon fils.
+#
 alias: pause volumio chambre de Jules
-description: ''
 trigger:
   platform: event
   event_type: deconz_event

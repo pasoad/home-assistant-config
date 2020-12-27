@@ -1,3 +1,7 @@
+#
+# Trun on the kitchen light with a ON short press on a Tradfri remote.
+# Allumer la lumière de la cuisine avec un appuis court sur le boutton ON d'une télécommande Tradfri.
+#
 alias: all_off
 description: ''
 trigger:

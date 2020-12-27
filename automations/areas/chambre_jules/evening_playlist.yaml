@@ -1,5 +1,8 @@
+#
+# Trying to start playlist on volumio in my son's bedroom for the evening song but it dosen't work for now.
+# J'essaye de lancer un playlist sur volumio dans la chambre de mon fils pour les veilleuses du soir mais ça ne fontionne pas pour l'instant.
+#
 alias: evening Jules playlist
-description: ''
 trigger:
   platform: event
   event_type: deconz_event
@@ -11,7 +14,7 @@ action:
   - service: media_player.select_source
     entity_id: media_player.spotify_pasoad
     data:
-      source: Volumiojules_3
+      source: Volumiojules_2
   - service: media_player.play_media
     entity_id: media_player.spotify_pasoad
     data:

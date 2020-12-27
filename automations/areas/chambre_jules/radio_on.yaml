@@ -1,3 +1,7 @@
+#
+# Power on volumio player in my son's bedroom at 19:30 only if we are home. And after 5 minutes (to be sure it started 100%), set the volume to 80%.
+# Allumer le player volumio dans la chambre de mon fils à 19:30 seulement si nous sommes chez mous. Et après 5 minsute (pour être sur qu'il a démarré à 100%), régler le volume sur 80%.
+#
 alias: "radio_on"
 trigger:
   - platform: time

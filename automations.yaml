@@ -1,0 +1,25 @@
+- id: '1609014201324'
+  alias: Low battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      day: '0'
+      actions:
+      - service: notify.mobile_app_iphone_de_p_a
+        data:
+          message:
+            '[object Object]':
+              '[object Object]':
+- id: '1609085982606'
+  alias: Battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      day: '1'
+      threshold: '15'
+      actions:
+      - service: notify.mobile_app_iphone_de_p_a
+        data:
+          message: La batterie de {{sensors}} est à 15%
