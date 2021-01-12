@@ -1,0 +1,11 @@
+alias: Battery level detection & notification for all battery sensors
+description: ''
+use_blueprint:
+  path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+  input:
+    day: '1'
+    threshold: '15'
+    actions:
+    - service: notify.mobile_app_iphone_de_p_a
+      data:
+        message: La batterie de {{sensors}} est à 15%

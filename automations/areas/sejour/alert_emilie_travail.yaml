@@ -1,0 +1,54 @@
+alias: Alerte travail Emilie
+trigger:
+  - platform: time
+    at: "04:40:00"
+condition:
+  - condition: state
+    entity_id: group.potellefamily
+    state: home
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+action:
+  - entity_id: light.lustre_cuisine
+    service: light.toggle
+  - entity_id: light.lustre_du_sejour
+    service: light.toggle
+  - entity_id: light.toilettes
+    service: light.toggle
+  - entity_id: light.salle_de_bain_2
+    service: light.toggle
+  - delay : "00:00:01"
+  - entity_id: light.lustre_cuisine
+    service: light.toggle
+  - entity_id: light.lustre_du_sejour
+    service: light.toggle
+  - entity_id: light.toilettes
+    service: light.toggle
+  - entity_id: light.salle_de_bain_2
+    service: light.toggle
+  - delay : "00:00:01"
+  - entity_id: light.lustre_cuisine
+    service: light.toggle
+  - entity_id: light.lustre_du_sejour
+    service: light.toggle
+  - entity_id: light.toilettes
+    service: light.toggle
+  - entity_id: light.salle_de_bain_2
+    service: light.toggle
+  - delay : "00:00:01"
+  - entity_id: light.lustre_cuisine
+    service: light.toggle
+  - entity_id: light.lustre_du_sejour
+    service: light.toggle
+  - entity_id: light.toilettes
+    service: light.toggle
+  - entity_id: light.salle_de_bain_2
+    service: light.toggle
+  - delay : "00:00:01"
+

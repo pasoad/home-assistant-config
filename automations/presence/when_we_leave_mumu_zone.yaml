@@ -1,7 +1,7 @@
 alias: when_we_leave_mumu_zone
 trigger:
   - platform: state
-    entity_id: group.potellefamily
+    entity_id: person.p_a
     from: mumu_et_alentours
 condition:
   - condition: time

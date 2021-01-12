@@ -32,6 +32,8 @@ cards:
     - !include /config/lovelace/cards/multimedia/spotify_pasoad.yaml
     - !include /config/lovelace/cards/multimedia/spotify_emiliou.yaml
 
+    - !include /config/lovelace/cards/multimedia/sony_LSPX-S2.yaml
+
   - type: vertical-stack
     cards:
       - type: horizontal-stack

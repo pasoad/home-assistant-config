@@ -3,6 +3,10 @@ visible:
   - user: a443888618b748ca8c7e994d13d4ae3f
 cards:
 
+  - type: custom:thermostat-dark-card
+    title: Thermostat
+    entity: climate.netatmo_hall_d_entree
+
   - type: 'custom:auto-entities'
     card:
       title: Batteries

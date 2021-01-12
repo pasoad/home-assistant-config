@@ -14,6 +14,9 @@ condition:
       - fri
       - sat
 action:
-  - service: notify.mobile_app_bkl_l09
+  - service: notify.mobile_app_iphone_de_emilie
+    data_template:
+      message: "P.A. vient de partir du boulot"
+  - service: notify.mobile_app_iphone_de_p_a
     data_template:
       message: "P.A. vient de partir du boulot"

@@ -3,14 +3,15 @@ entities:
   - entity: switch.on_off_led_bureau
     name: LED du bureau
     icon: mdi:led-strip-variant
+  - entity: light.lampe_du_bureau_rgb
+  - entity: switch.on_off_sapin
+    name: Sapin
+    icon: mdi:string-lights
   - entity: scene.ambiance_chill_ordi
     name: Ambiance chill ordi
   - entity: scene.ambiance_film
     name: Ambiance film
     icon: mdi:movie
-  - entity: switch.on_off_sapin
-    name: Sapin
-    icon: mdi:string-lights
 title: Lumières d'appoint
 show_header_toggle: false
 type: entities

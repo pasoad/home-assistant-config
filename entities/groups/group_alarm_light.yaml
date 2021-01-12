@@ -1,0 +1,5 @@
+group_alarm_light:
+  - light.lustre_cuisine
+  - light.lustre_du_sejour
+  - light.toilettes
+  - light.salle_de_bain_2
